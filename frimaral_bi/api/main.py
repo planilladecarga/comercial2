@@ -1,15 +1,16 @@
 """
-FRIMARAL BI - Centro de Comando Comercial
-FastAPI Server - Sprint 6
+FRIMARAL BI - Centro de Comando Comercial + Business Query Engine
+FastAPI Server - Sprint 6 + Sprint 7
 """
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .routes.comando import router as comando_router
+from .routes.business_query import router as query_router
 from .config import HOST, PORT
 
 app = FastAPI(
-    title="FRIMARAL BI - Centro de Comando Comercial",
-    description="API para el Dashboard Ejecutivo del Director Comercial",
+    title="FRIMARAL BI - API",
+    description="Centro de Comando Comercial y Motor de Consultas - FRIMARAL BI",
     version="1.0.0",
 )
 
@@ -22,6 +23,7 @@ app.add_middleware(
 )
 
 app.include_router(comando_router, prefix="/api/comando", tags=["Comando"])
+app.include_router(query_router, prefix="/api/query", tags=["Query"])
 
 
 @app.get("/health")
