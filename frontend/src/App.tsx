@@ -8,6 +8,7 @@ import { Trace } from './pages/Trace'
 import { Reports } from './pages/Reports'
 import { Settings } from './pages/Settings'
 import { Login } from './pages/Login'
+import { Comando360 } from './pages/Comando360'
 
 const queryClient = new QueryClient()
 
@@ -20,7 +21,7 @@ export default function App() {
           <Route path="/*" element={
             <Layout>
               <Routes>
-                <Route path="/" element={<Dashboard />} />
+                <Route path="/" element={<Comando360 />} />
                 <Route path="/envios" element={<Shipments />} />
                 <Route path="/trazabilidad" element={<Trace />} />
                 <Route path="/reportes" element={<Reports />} />

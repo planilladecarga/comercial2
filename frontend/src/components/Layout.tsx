@@ -1,9 +1,9 @@
 import { NavLink, Outlet } from 'react-router-dom'
-import { LayoutDashboard, Package, Search, FileText, Settings } from 'lucide-react'
+import { LayoutDashboard, Package, Search, FileText, Settings, Command } from 'lucide-react'
 import clsx from 'clsx'
 
 const navItems = [
-  { to: '/', icon: LayoutDashboard, label: 'Dashboard' },
+  { to: '/', icon: Command, label: 'Comando 360' },
   { to: '/envios', icon: Package, label: 'Envíos' },
   { to: '/trazabilidad', icon: Search, label: 'Trazabilidad' },
   { to: '/reportes', icon: FileText, label: 'Reportes' },
