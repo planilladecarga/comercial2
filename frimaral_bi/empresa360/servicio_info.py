@@ -7,7 +7,7 @@ servicio_info.py — Información General de Empresa360
 from __future__ import annotations
 from dataclasses import dataclass
 from typing import Optional
-from empresa360.repositorio import Repositorio
+from .repositorio import Repositorio
 
 
 @dataclass

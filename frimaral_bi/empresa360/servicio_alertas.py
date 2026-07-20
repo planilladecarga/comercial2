@@ -7,8 +7,8 @@ servicio_alertas.py — Sistema de alertas inteligentes
 from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Optional
-from empresa360.repositorio import Repositorio
-from empresa360.servicio_evolucion import ServicioEvolucion
+from .repositorio import Repositorio
+from .servicio_evolucion import ServicioEvolucion
 
 
 @dataclass

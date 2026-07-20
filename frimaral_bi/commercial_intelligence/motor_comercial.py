@@ -27,10 +27,10 @@ from pathlib import Path
 from typing import Any, Optional
 from dataclasses import dataclass, asdict
 
-from empresa360.repositorio import Repositorio
-from ..database import db
+from ..empresa360.repositorio import Repositorio
+from ..api.database import db
 from .scoring.scoring_service import ScoringService
-from .scoring.models import ScoreResult, ScoreBreakdown, FactorDetail
+from .scoring.models import ScoreResult, ScoreBreakdown, FactorResult
 from .rules.rules_engine import RulesEngine
 from .recommendations.recommendation_engine import RecommendationEngine
 from .risk.risk_engine import RiskEngine, RiskLevel

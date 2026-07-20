@@ -7,7 +7,7 @@ riesgos_service.py — Detección de Riesgos Comerciales
 from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Optional
-from empresa360.repositorio import Repositorio
+from ..empresa360.repositorio import Repositorio
 from competitive_intelligence.repositorio import RepositorioCIE
 
 

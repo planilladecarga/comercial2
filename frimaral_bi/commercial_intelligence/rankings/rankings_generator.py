@@ -9,7 +9,7 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Any
 
-from ..database import db
+from ...api.database import db
 
 
 class RankingsGenerator:

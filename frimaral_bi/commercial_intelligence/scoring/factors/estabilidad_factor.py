@@ -73,14 +73,3 @@ class EstabilidadFactor(FactorBase):
             comparacion_periodo="vs_mes_anterior",
             detalle=detalle,
         )
-
-    def _periodo_a_meses(self, periodo: str) -> int:
-        """Convert period string to months."""
-        mapping = {
-            "ultimo_mes": 1,
-            "ultimos_3_meses": 3,
-            "ultimos_6_meses": 6,
-            "ultimo_anio": 12,
-            "ultimos_2_anios": 24,
-        }
-        return mapping.get(periodo, 6)

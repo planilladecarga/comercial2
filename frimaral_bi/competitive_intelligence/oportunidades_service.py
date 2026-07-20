@@ -94,20 +94,19 @@ class OportunidadesService:
             m["mercado"] for m in self.repo.mercados_empresa(id_empresa)
         }
 
-        for p in prod_exp:
-            # Productores con export a mercados donde no estamos
-            export_no_a = self.repo.productores_exportan_mercado_no_a(
-                id_empresa, id_empresa
-            )
-            for e in export_no_a[:10]:
-                r.exportacion.append(Oportunidad(
-                    tipo          = "EXPORTACIÓN",
-                    prioridad     = 1,
-                    nombre        = e["nombre_productor"],
-                    kg            = e["kg_total"] or 0,
-                    detalle       = f"Mercado: {e['mercado']}",
-                    justificacion = "Exporta a mercados donde no participa la empresa",
-                ))
+        # Query outside loop - was called inside loop with same args (N+1 bug)
+        export_no_a = self.repo.productores_exportan_mercado_no_a(
+            id_empresa, id_empresa
+        )
+        for e in export_no_a[:10]:
+            r.exportacion.append(Oportunidad(
+                tipo          = "EXPORTACIÓN",
+                prioridad     = 1,
+                nombre        = e["nombre_productor"],
+                kg            = e["kg_total"] or 0,
+                detalle       = f"Mercado: {e['mercado']}",
+                justificacion = "Exporta a mercados donde no participa la empresa",
+            ))
 
         # 4. Crecimiento de productores
         crecimiento = self.repo.crecimiento_productores(id_empresa)

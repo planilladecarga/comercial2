@@ -29,14 +29,14 @@ from pathlib import Path
 from dataclasses import dataclass, field, asdict
 from typing import Optional, Any
 
-from empresa360.repositorio          import Repositorio
-from empresa360.servicio_info        import ServicioInfo, InfoGeneral
-from empresa360.servicio_roles      import ServicioRoles, RolesEmpresa
-from empresa360.servicio_indicadores import ServicioIndicadores, Indicadores360
-from empresa360.servicio_relaciones import ServicioRelaciones, Relaciones360
-from empresa360.servicio_evolucion   import ServicioEvolucion, Evolucion360
-from empresa360.servicio_competidores import ServicioCompetidores, Competidores360
-from empresa360.servicio_alertas     import ServicioAlertas, Alertas360
+from .repositorio import Repositorio
+from .servicio_info import ServicioInfo, InfoGeneral
+from .servicio_roles import ServicioRoles, RolesEmpresa
+from .servicio_indicadores import ServicioIndicadores, Indicadores360
+from .servicio_relaciones import ServicioRelaciones, Relaciones360
+from .servicio_evolucion import ServicioEvolucion, Evolucion360
+from .servicio_competidores import ServicioCompetidores, Competidores360
+from .servicio_alertas import ServicioAlertas, Alertas360
 
 
 # ─────────────────────────────────────────────────────────────────────────────

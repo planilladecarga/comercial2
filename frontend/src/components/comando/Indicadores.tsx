@@ -58,8 +58,8 @@ export function Indicadores({ data }: Props) {
                 <Icon className="w-4 h-4" />
               </div>
               <p className="text-2xl font-bold">
-                {kpi.data.valor.toFixed(1)}
-                <span className="text-xs font-normal ml-1">{kpi.data.unidad}</span>
+                {typeof kpi.data?.valor === 'number' ? kpi.data.valor.toFixed(1) : '—'}
+                <span className="text-xs font-normal ml-1">{kpi.data?.unidad}</span>
               </p>
               <p className="text-xs mt-1 opacity-75">{kpi.data.detalle}</p>
             </div>

@@ -7,7 +7,7 @@ servicio_relaciones.py — Productores, Certificadores y Depósitos relacionados
 from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Optional
-from empresa360.repositorio import Repositorio
+from .repositorio import Repositorio
 
 
 @dataclass

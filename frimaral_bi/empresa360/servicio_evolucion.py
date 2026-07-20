@@ -7,7 +7,7 @@ servicio_evolucion.py — Evolución mensual de volúmenes
 from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Optional
-from empresa360.repositorio import Repositorio
+from .repositorio import Repositorio
 
 
 @dataclass

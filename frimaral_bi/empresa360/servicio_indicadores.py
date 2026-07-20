@@ -6,7 +6,7 @@ servicio_indicadores.py — KPIs de Empresa360
 
 from __future__ import annotations
 from dataclasses import dataclass
-from empresa360.repositorio import Repositorio
+from .repositorio import Repositorio
 
 
 @dataclass

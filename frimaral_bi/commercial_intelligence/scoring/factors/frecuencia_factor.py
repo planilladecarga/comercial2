@@ -47,14 +47,3 @@ class FrecuenciaFactor(FactorBase):
             comparacion_periodo=f"{cant_act} vs {cant_ant} anterior",
             detalle=f"{cant_act} movimientos ({periodo})",
         )
-
-    def _periodo_a_meses(self, periodo: str) -> int:
-        """Convert period string to months."""
-        mapping = {
-            "ultimo_mes": 1,
-            "ultimos_3_meses": 3,
-            "ultimos_6_meses": 6,
-            "ultimo_anio": 12,
-            "ultimos_2_anios": 24,
-        }
-        return mapping.get(periodo, 6)

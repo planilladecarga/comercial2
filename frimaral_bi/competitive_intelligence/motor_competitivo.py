@@ -41,7 +41,7 @@ import argparse
 from pathlib import Path
 from typing import Any, Optional
 
-from empresa360.repositorio import Repositorio
+from ..empresa360.repositorio import Repositorio
 from competitive_intelligence.repositorio import RepositorioCIE
 from competitive_intelligence.indicadores_service import IndicadoresService, IndicesComerciales
 from competitive_intelligence.comparador_service import ComparadorService, ResultadoComparacion

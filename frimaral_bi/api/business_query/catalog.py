@@ -112,7 +112,7 @@ CONSULTAS_CATALOGO: list[QueryDefinicion] = [
                 requerido=True, opciones=[],
                 descripcion="Empresa de referencia (ej: CALIRAL)"
             ),
-        ] + _periodo_params() + _limit_param(50),
+        ] + _periodo_params() + [_limit_param(50)],
         sql="""
             SELECT
                 m.nro_gre AS "N° GRE",
@@ -157,7 +157,7 @@ CONSULTAS_CATALOGO: list[QueryDefinicion] = [
         categoria="deposito",
         parametros=[
             _empresa_param(),
-        ] + _periodo_params() + _limit_param(50),
+        ] + _periodo_params() + [_limit_param(50)],
         sql="""
             SELECT
                 m.nombre_establecimiento AS "Depósito",
@@ -190,7 +190,7 @@ CONSULTAS_CATALOGO: list[QueryDefinicion] = [
         categoria="productor",
         parametros=[
             _empresa_param("Empresa"),
-        ] + _periodo_params() + _limit_param(50),
+        ] + _periodo_params() + [_limit_param(50)],
         sql="""
             SELECT
                 m.nro_productor AS "N° Productor",
@@ -228,7 +228,7 @@ CONSULTAS_CATALOGO: list[QueryDefinicion] = [
                 requerido=True, opciones=[],
                 descripcion="Empresa a analizar"
             ),
-        ] + _periodo_params() + _limit_param(50),
+        ] + _periodo_params() + [_limit_param(50)],
         sql="""
             SELECT
                 m.nro_productor AS "N° Productor",
@@ -258,7 +258,7 @@ CONSULTAS_CATALOGO: list[QueryDefinicion] = [
         categoria="mercado",
         parametros=[
             _empresa_param(),
-        ] + _periodo_params() + _limit_param(50),
+        ] + _periodo_params() + [_limit_param(50)],
         sql="""
             SELECT
                 COALESCE(NULLIF(TRIM(m.destino), ''), 'URUGUAY (Mercado Interno)') AS "Mercado",
@@ -292,7 +292,7 @@ CONSULTAS_CATALOGO: list[QueryDefinicion] = [
         categoria="mercado",
         parametros=[
             _empresa_param(),
-        ] + _periodo_params() + _limit_param(50),
+        ] + _periodo_params() + [_limit_param(50)],
         sql="""
             SELECT
                 COALESCE(NULLIF(TRIM(m.destino), ''), 'URUGUAY (Mercado Interno)') AS "Mercado",
@@ -324,7 +324,7 @@ CONSULTAS_CATALOGO: list[QueryDefinicion] = [
         parametros=[
             _empresa_param("Empresa"),
             _empresa_param("Empresa Competencia"),
-        ] + _periodo_params() + _limit_param(50),
+        ] + _periodo_params() + [_limit_param(50)],
         sql="""
             SELECT
                 COALESCE(NULLIF(TRIM(m_comp.destino), ''), 'URUGUAY (Mercado Interno)') AS "Mercado",
@@ -360,7 +360,7 @@ CONSULTAS_CATALOGO: list[QueryDefinicion] = [
         parametros=[
             _empresa_param("Empresa A"),
             _empresa_param("Empresa B"),
-        ] + _periodo_params() + _limit_param(50),
+        ] + _periodo_params() + [_limit_param(50)],
         sql="""
             SELECT
                 m1.nro_productor AS "N° Productor",
@@ -400,7 +400,7 @@ CONSULTAS_CATALOGO: list[QueryDefinicion] = [
         categoria="productor",
         parametros=[
             _empresa_param("Empresa"),
-        ] + _periodo_params() + _limit_param(50),
+        ] + _periodo_params() + [_limit_param(50)],
         sql="""
             SELECT
                 m.nro_productor AS "N° Productor",
@@ -436,7 +436,7 @@ CONSULTAS_CATALOGO: list[QueryDefinicion] = [
         categoria="empresa",
         parametros=[
             _empresa_param(),
-        ] + _periodo_params() + _limit_param(50),
+        ] + _periodo_params() + [_limit_param(50)],
         sql="""
             SELECT
                 m.destino AS "Cliente",
@@ -475,7 +475,7 @@ CONSULTAS_CATALOGO: list[QueryDefinicion] = [
                 requerido=False, opciones=[],
                 descripcion="Filtrar por empresa (opcional)"
             ),
-        ] + _periodo_params() + _limit_param(50),
+        ] + _periodo_params() + [_limit_param(50)],
         sql="""
             SELECT
                 m.nombre_establecimiento AS "Certificador",
@@ -513,7 +513,7 @@ CONSULTAS_CATALOGO: list[QueryDefinicion] = [
                 requerido=False, opciones=[],
                 descripcion="Filtrar por empresa (opcional)"
             ),
-        ] + _periodo_params() + _limit_param(50),
+        ] + _periodo_params() + [_limit_param(50)],
         sql="""
             SELECT
                 m.nombre_establecimiento AS "Depósito",
@@ -552,7 +552,7 @@ CONSULTAS_CATALOGO: list[QueryDefinicion] = [
                 requerido=False, opciones=[],
                 descripcion="Filtrar por empresa (0 = todas)"
             ),
-        ] + _periodo_params() + _limit_param(50),
+        ] + _periodo_params() + [_limit_param(50)],
         sql="""
             SELECT
                 m.nro_productor AS "N° Productor",
@@ -590,7 +590,7 @@ CONSULTAS_CATALOGO: list[QueryDefinicion] = [
                 requerido=False, opciones=[],
                 descripcion="Filtrar por empresa (0 = todas)"
             ),
-        ] + _periodo_params() + _limit_param(50),
+        ] + _periodo_params() + [_limit_param(50)],
         sql="""
             SELECT
                 COALESCE(NULLIF(TRIM(m.destino), ''), 'URUGUAY (Mercado Interno)') AS "Mercado",
@@ -623,7 +623,7 @@ CONSULTAS_CATALOGO: list[QueryDefinicion] = [
                 requerido=False, opciones=[],
                 descripcion="Filtrar por empresa (0 = todas)"
             ),
-        ] + _periodo_params() + _limit_param(50),
+        ] + _periodo_params() + [_limit_param(50)],
         sql="""
             SELECT
                 p.nombre_producto AS "Producto",

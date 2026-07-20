@@ -7,7 +7,7 @@ servicio_competidores.py — Detección de competidores e índice de similitud
 from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Optional
-from empresa360.repositorio import Repositorio
+from .repositorio import Repositorio
 
 
 @dataclass

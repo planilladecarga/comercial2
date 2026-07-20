@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any, Optional
 from dataclasses import dataclass
 
-from ...database import db
+from ...api.database import db
 
 
 @dataclass

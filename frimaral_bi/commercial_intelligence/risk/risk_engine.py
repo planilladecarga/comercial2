@@ -113,7 +113,7 @@ class RiskEngine:
 
     def _verificar_inactividad(self, id_empresa: int) -> int:
         """Verifica meses de inactividad."""
-        from ..database import db
+        from ...api.database import db
 
         query = """
             SELECT MAX(m.fecha_movimiento) as ultima_fecha

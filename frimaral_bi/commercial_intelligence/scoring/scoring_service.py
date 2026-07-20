@@ -10,7 +10,7 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Any, Optional
 
-from empresa360.repositorio import Repositorio
+from ...empresa360.repositorio import Repositorio
 from .models import ScoreResult, ScoreBreakdown, FactorResult
 from .factors.factor_base import FactorConfig
 from .factors.volumen_factor import VolumenFactor

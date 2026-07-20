@@ -7,7 +7,7 @@ from pydantic import BaseModel
 from datetime import datetime
 
 from ..database import db
-from ...commercial_intelligence import MotorComercial
+from frimaral_bi.commercial_intelligence import MotorComercial
 
 router = APIRouter()
 

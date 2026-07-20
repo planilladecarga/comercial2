@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { LayoutDashboard, Package, Search, FileText, Settings, Command, Database } from 'lucide-react'
 import clsx from 'clsx'
 

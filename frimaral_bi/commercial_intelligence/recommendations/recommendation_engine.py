@@ -50,7 +50,7 @@ class RecommendationEngine:
         Returns:
             Lista de recomendaciones generadas
         """
-        from ..database import db
+        from ...api.database import db
 
         recomendaciones = []
 
@@ -115,7 +115,7 @@ class RecommendationEngine:
         recomendaciones: list[Recommendation]
     ) -> None:
         """Guarda las recomendaciones en la base de datos."""
-        from ..database import db
+        from ...api.database import db
 
         for rec in recomendaciones:
             db.execute(
@@ -141,7 +141,7 @@ class RecommendationEngine:
         Returns:
             Lista de recomendaciones
         """
-        from ..database import db
+        from ...api.database import db
 
         if estado:
             rows = db.execute(

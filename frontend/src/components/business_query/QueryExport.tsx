@@ -1,7 +1,7 @@
 /**
  * QueryExport - Botones de exportación
  */
-import { Download, FileSpreadsheet, FileText } from "lucide-react"
+import { FileSpreadsheet, FileText } from "lucide-react"
 
 interface Props {
   resultado: any

@@ -39,7 +39,7 @@ from dataclasses import dataclass
 from typing import Optional, Any
 
 from competitive_intelligence.repositorio          import RepositorioCIE
-from empresa360.repositorio                        import Repositorio
+from ..empresa360.repositorio import Repositorio
 from competitive_intelligence.comparador_service import ComparadorService, ResultadoComparacion
 from competitive_intelligence.indicadores_service  import IndicadoresService, IndicesComerciales
 from competitive_intelligence.radar_service        import RadarService, RadarCambios

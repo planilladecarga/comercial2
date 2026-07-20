@@ -25,8 +25,8 @@ class QueryDefinicion:
     nombre: str
     descripcion: str
     categoria: str  # "exportacion" | "productor" | "mercado" | "ranking" | "deposito" | "certificador" | "empresa"
-    parametros: list[QueryParametro] = field(default_factory=list)
     sql: str
+    parametros: list[QueryParametro] = field(default_factory=list)
     reglas_negocio: list[str] = field(default_factory=list)
     ejemplo_respuesta: dict = field(default_factory=dict)
 

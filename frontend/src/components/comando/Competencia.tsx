@@ -70,14 +70,14 @@ export function Competencia({ data, empresas, empresaAId, empresaBId, onCambiarE
       <div className="mb-4">
         <div className="flex justify-between text-sm mb-1">
           <span className="font-medium">{data.empresa_a}</span>
-          <span className="text-gray-500">{formatKg(data.kg_a)} ({data.participacion_a.toFixed(1)}%)</span>
+          <span className="text-gray-500">{formatKg(data.kg_a)} ({typeof data.participacion_a === 'number' ? data.participacion_a.toFixed(1) : '—'}%)</span>
         </div>
         <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
           <div className="h-full bg-emerald-500" style={{ width: `${ratioA}%` }} />
         </div>
         <div className="flex justify-between text-sm mt-1">
           <span className="font-medium">{data.empresa_b}</span>
-          <span className="text-gray-500">{formatKg(data.kg_b)} ({data.participacion_b.toFixed(1)}%)</span>
+          <span className="text-gray-500">{formatKg(data.kg_b)} ({typeof data.participacion_b === 'number' ? data.participacion_b.toFixed(1) : '—'}%)</span>
         </div>
         <div className="h-3 bg-gray-100 rounded-full overflow-hidden">
           <div className="h-full bg-purple-500" style={{ width: `${ratioB}%` }} />

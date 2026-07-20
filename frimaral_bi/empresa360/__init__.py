@@ -29,7 +29,7 @@ Uso:
     python -m empresa360.vista360 "CALIRAL"
 """
 
-from empresa360.vista360 import Vista360
+from .vista360 import Vista360
 
 __all__ = [
     "Vista360",
